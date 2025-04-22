@@ -25,7 +25,7 @@ In the misc_scripts folder, there is home-brew command line tool that can genera
 
 Below is an example of its usage from a jupyter notebook:
 
-<pre> ```python ~/misc_scripts/map_peaks_to_genes.py \
+<pre> python ~/misc_scripts/map_peaks_to_genes.py \
   --input_file atac_v2_pbmc_10k_filtered_peak_bc_matrix.h5 \ 
   --gtf_file ~/refdata-gex-GRCh38-2020-A/genes/genes.gtf </pre>
 
