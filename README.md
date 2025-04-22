@@ -6,7 +6,7 @@
 
 - Here, I am showcasing how orthogonal methods can be used to achieve similar results with standard single-cell tools that exist the scverse.
 
-##Preprocessing
+## Preprocessing
 
 Publicly available data was first obtained from the 10X Genomics wesbsite:
 
