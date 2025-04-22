@@ -15,3 +15,14 @@ Publicly available data was first obtained from the 10X Genomics wesbsite:
 - [Fragments file](https://cf.10xgenomics.com/samples/cell-atac/2.1.0/10k_pbmc_ATACv2_nextgem_Chromium_Controller/10k_pbmc_ATACv2_nextgem_Chromium_Controller_fragments.tsv.gz)
 
 - [Fragments index](https://cf.10xgenomics.com/samples/cell-atac/2.1.0/10k_pbmc_ATACv2_nextgem_Chromium_Controller/10k_pbmc_ATACv2_nextgem_Chromium_Controller_fragments.tsv.gz.tbi)
+
+We will also need an peak_annotation.tsv file as outlined [here](https://www.10xgenomics.com/support/software/cell-ranger-atac/latest/analysis/peak-annotations).
+
+In the misc_scripts folder, there is home-brew command line tool that can generate this file by taking in two fiiles:
+
+1. gtf file containing transcriptomic coordinates
+2. filtered .h5 matrix output from cellRanger
+
+Below is an example of its usage from a jupyter notebook:
+
+%run ~/atac_data/misc_scripts/map_peaks_to_genes.py --input_file atac_v2_pbmc_10k_filtered_peak_bc_matrix.h5  --gtf_file ~/atac_data/refdata-gex-GRCh38-2020-A/genes/genes.gtf
