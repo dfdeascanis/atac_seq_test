@@ -23,7 +23,7 @@ In the misc_scripts folder, there is home-brew command line tool that can genera
 1. gtf file containing transcriptomic coordinates
 2. filtered .h5 matrix output from cellRanger
 
-Below is an example of its usage from a jupyter notebook:
+Below is an example of its usage from the command line:
 
 <pre> python ~/misc_scripts/map_peaks_to_genes.py \
   --input_file atac_v2_pbmc_10k_filtered_peak_bc_matrix.h5 \ 
