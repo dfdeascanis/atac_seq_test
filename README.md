@@ -46,7 +46,7 @@ From there, the fragment matrix is used to calculate pearson residuals against a
 
 Highly variable features are selected and used for subsequent dimensionality reduction.
 
-We then finish up with create a gene activty matrix to relate the fragment counts signal to relevant genes of interest that can be used for further integration and label transfer with scRNA-Seq data. 
+We then finish up with create a gene activty matrix to relate the fragment counts signal to relevant genes of interest that can be used for further integration and label transfer with scRNA-Seq data
 
 ![image](https://github.com/user-attachments/assets/91fd428c-950a-43ba-b2c7-6f70cd2dd27a)
 
