@@ -29,3 +29,24 @@ Below is an example of its usage from the command line:
   --input_file atac_v2_pbmc_10k_filtered_peak_bc_matrix.h5 \ 
   --gtf_file ~/refdata-gex-GRCh38-2020-A/genes/genes.gtf </pre>
 
+The next portion of the preprocessing takes into account the following:
+
+1. Removing undetected peaks
+2. Filtering peaks deteced in less than ~30 cells
+3. Calculating transcription start-site (TSS) enrichment
+4. Enriching for nucleosome-free fragments by calculating the nucleosomal signal based on fragment length
+
+## Normalisation
+
+We will follow a similar logic to quantitivaly analyze the data using a poisson model as outlined in [this publication](https://www.nature.com/articles/s41592-023-02112-6).
+
+First, we use a home-brew function in the /misc_scripts/helper_funcs.py file that creates a fragment matrix.
+
+From there, the fragment matrix is used to calculate pearson residuals against a poisson model for feature selection.
+
+Highly variable features are selected and used for subsequent dimensionality reduction.
+
+We then finish up with create a gene activty matrix to relate the fragment counts signal to relevant genes of interest that can be used for further integration and label transfer with scRNA-Seq data. 
+
+
+
