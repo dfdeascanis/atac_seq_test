@@ -48,6 +48,15 @@ Highly variable features are selected and used for subsequent dimensionality red
 
 We then finish up with create a gene activty matrix to relate the fragment counts signal to relevant genes of interest that can be used for further integration and label transfer with scRNA-Seq data
 
+## Generating a gene activity matrix and finding biologically relevant peaks
+
+We use our normalized matrix of peaks to do the following:
+
+1. Leverage the term frequency-inverse document frequency (tf-idf) method to perform dimensionality reduction on atac-seq data
+2. Generate a gene activity matrix to find open chromatin peaks around genes
+3. Use the gene activity matrix to reduce the number of features, survey various feature selection methods, and perform a logistic regression to find gene-relevant peaks to aid in cluster identification.
+
+
 ![image](https://github.com/user-attachments/assets/91fd428c-950a-43ba-b2c7-6f70cd2dd27a)
 
 
