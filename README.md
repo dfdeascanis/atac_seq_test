@@ -54,6 +54,9 @@ We use our normalized matrix of peaks to do the following:
 
 1. Leverage the term frequency-inverse document frequency (tf-idf) method to perform dimensionality reduction on atac-seq data
 2. Generate a gene activity matrix to find open chromatin peaks around genes
-3. Use the gene activity matrix to reduce the number of features, survey various feature selection methods, and perform a logistic regression to find gene-relevant peaks to aid in cluster identification
+3. Use the gene activity matrix to reduce the number of features, survey various feature selection methods, and perform a logistic regression to find differentially accessible gene-relevent peaks
 
+### Differentially accessible peaks
 ![clustermap](images/d2c_clustermap.png)
+
+![featureplot](images/umapfeature_plot.png)
